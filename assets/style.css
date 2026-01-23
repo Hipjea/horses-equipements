@@ -1,14 +1,17 @@
-
 :root {
+  --mx: 50%;
+  --my: 50%;
   --color-black: #000000;
-  --color-white: #FFFFFF;
+  --color-white: #ffffff;
   --color-grey: #808080;
-  --color-chocolate-brow: #6D4C41;
-  --color-pine-green: #1B4D3E;
-  --color-gold: #E6B325;
+  --color-chocolate-brown: #6d4c41;
+  --color-chocolate-brown-dimmed: #f3e6e0;
+  --color-chocolate-brown-darker: #be9c91;
+  --color-pine-green: #1b4d3e;
+  --color-gold: #e6b325;
   --color-gold-dimmed: #facf5a;
-  --color-vermillon-red: #E03C31;
-  --color-beige-grey: #D5D3CC;
+  --color-vermillon-red: #e03c31;
+  --color-beige-grey: #d5d3cc;
 }
 
 * {
@@ -17,28 +20,38 @@
   padding: 0;
 }
 
+html,
+body {
+  height: 100%;
+  overflow: auto;
+}
+
 body {
   min-height: 100vh;
-  background: linear-gradient(160deg, var(--color-pine-green), #0f1420);
   font-family: "Roboto Flex", system-ui, sans-serif;
   display: flex;
   flex-direction: column;
   align-items: center;
+  background: linear-gradient(
+    160deg,
+    var(--color-chocolate-brown-dimmed),
+    var(--color-chocolate-brown-darker)
+  );
 }
 
 .page {
   flex: 1;
   display: flex;
   align-items: center;
-  padding: 2rem;
+  padding: 1rem 0.5rem;
 }
 
 .card {
   background: var(--color-white);
-  border-radius: 12px;
+  border-radius: 4px;
   max-width: 1100px;
   width: 100%;
-  padding: 3rem;
+  padding: 2.75rem 6rem;
   box-shadow: 0 25px 60px rgba(0, 0, 0, 0.3);
   text-align: center;
 }
@@ -47,29 +60,91 @@ body {
 
 .header {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
+  align-items: center;
 }
 
-.header h1 {
+.header div {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-left: 2rem;
+}
+
+.header div h1 {
   font-family: "PT Serif", serif;
   font-size: 2.5rem;
   color: var(--color-pine-green);
-  margin-top: 1rem;
+}
+
+.header div p {
+  font-family: "PT Serif", serif;
+  color: var(--color-grey);
+  font-size: 1.2rem;
+}
+
+:root {
+  --mx: 50%;
+  --my: 50%;
 }
 
 .tagline {
-  background-color: var(--color-gold-dimmed);
+  position: relative;
+  overflow: hidden;
   color: var(--color-black);
   margin-top: 3rem;
-  padding: 0.5em 1em;
-  border-radius: 5px;
+  border-radius: 4px;
   font-size: 1.05rem;
-  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  filter: drop-shadow(5px 5px #967101);
+  transition: filter 300ms ease;
+  background-color: var(--color-gold-dimmed);
+}
+
+.tagline .text {
+  padding: 0.5em 1em;
+}
+
+.tagline .text .bi {
+  color: #967101;
+  font-size: 1.15em;
+  margin-right: 0.25em;
+}
+
+.tagline .text a {
+  color: var(--color-pine-green);
+  font-weight: bold;
+}
+
+.tagline .text a span {
+  display: inline-block;
+  transform: scaleX(-1);
+}
+
+.tagline:hover {
+  filter: drop-shadow(3px 3px #967101);
+}
+
+.tagline .holo {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  mix-blend-mode: overlay;
+  background: radial-gradient(
+    circle at var(--mx) var(--my),
+    rgba(255, 255, 255, 0.45),
+    rgba(255, 255, 255, 0) 55%
+  );
+  opacity: 0;
+  transition: opacity 0.35s ease;
+}
+
+.tagline:hover .holo {
+  opacity: 1;
 }
 
 .logo {
   width: 110px;
-  border-radius: 14px;
+  border-radius: 5px;
 }
 
 /* Contact */
@@ -119,6 +194,10 @@ body {
     box-shadow 0.25s ease-in-out;
 }
 
+.social-links a .bi {
+  margin-right: 0.35rem;
+}
+
 .social-links a.instagram {
   background: linear-gradient(45deg, #f58529, #dd2a7b, #8134af, #515bd4);
 }
@@ -158,8 +237,9 @@ body {
   border-collapse: collapse;
 }
 
+.hours th,
 .hours td {
-  padding: 0.7rem 0;
+  padding: 0.68rem 0;
   border-bottom: 1px solid var(--color-beige-grey);
 }
 
@@ -170,8 +250,9 @@ body {
 .map iframe {
   width: 100%;
   height: 340px;
-  border-radius: 14px;
-  border: 2px solid var(--color-beige-grey);
+  border-radius: 4px;
+  border: 1px solid var(--color-beige-grey);
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 }
 
 .brands {
@@ -199,7 +280,10 @@ body {
   height: auto;
   filter: grayscale(100%);
   opacity: 0.85;
-  transition: filter 0.3s ease, opacity 0.3s ease, transform 0.3s ease;
+  transition:
+    filter 0.3s ease,
+    opacity 0.3s ease,
+    transform 0.3s ease;
 }
 
 .brands-grid img:hover {
@@ -208,10 +292,9 @@ body {
   transform: scale(1.05);
 }
 
-
 /* Footer */
 .footer {
-  color: var(--color-beige-grey);
+  color: var(--color-black);
   font-size: 0.85rem;
   padding: 1rem;
 }
@@ -228,5 +311,23 @@ body {
 
   .header h1 {
     font-size: 2rem;
+  }
+
+  .contact {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .contact p {
+    margin: 0.5em 0;
+    text-align: left;
+  }
+
+  .hours {
+    width: 100%;
+  }
+
+  .map {
+    width: 100%;
   }
 }

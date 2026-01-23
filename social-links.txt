@@ -1,0 +1,34 @@
+<a href="https://www.ego7.it/" target="_blank">
+    <img src="assets/images/logos/ego7.png" alt="Logo de la marque d'équitation Ego7">
+</a>
+<img src="assets/images/logos/equitheme.png" alt="Logo de la marque d'équitation Equithème">
+<a href="https://flags-and-cup.com/fr/" target="_blank">
+    <img src="assets/images/logos/flag&cup.png" alt="Logo de la marque d'équitation Flags & Cup">
+</a>
+<a href="https://www.freejumpsystem.com/fr/" target="_blank">
+    <img src="assets/images/logos/freejump.png" alt="Logo de la marque d'équipement équestre Freejump">
+</a>
+<a href="https://harcour.fr/fr/" target="_blank">
+    <img src="assets/images/logos/harcour.png" alt="Logo de la marque d'équitation Harcour">
+</a>
+<a href="https://www.hkm-sports.com/fr/" target="_blank">
+    <img src="assets/images/logos/hkm.png" alt="Logo de la marque d'équipement équitation HKM">
+</a>
+<a href="https://houseofmontar.com/" target="_blank">
+    <img src="assets/images/logos/montar.png" alt="Logo de la marque d'équitation Montar">
+</a>
+<a href="https://www.groupe-techna.com/fr/paskacheval" target="_blank">
+    <img src="assets/images/logos/paskacheval.png" alt="Logo de la marque d'équipement équestre Paskacheval">
+</a>
+<a href="https://penelope-store.com/fr/" target="_blank">
+    <img src="assets/images/logos/penelope.png" alt="Logo de la marque d'équitation Pénélope">
+</a>
+<a href="https://ravene.com/" target="_blank">
+    <img src="assets/images/logos/ravene.png" alt="Logo de la marque de soins et équipements équestres Ravene">
+</a>
+<a href="https://rid-up.com/" target="_blank">
+    <img src="assets/images/logos/ridup.png" alt="Logo de la marque d'étriers et accessoires Rid'Up">
+</a>
+<a href="https://www.samshield.com/fr/" target="_blank">
+    <img src="assets/images/logos/samshield.png" alt="Logo de la marque d'équipement équestre Samshield">
+</a>
