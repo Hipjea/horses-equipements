@@ -1,19 +1,10 @@
-document.addEventListener("DOMContentLoaded", () => {
-  const taglines = document.querySelectorAll(".tagline");
-
-  taglines.forEach(tag => {
-    tag.addEventListener("mousemove", (e) => {
-      const rect = tag.getBoundingClientRect();
-      const x = ((e.clientX - rect.left) / rect.width) * 100;
-      const y = ((e.clientY - rect.top) / rect.height) * 100;
-
-      tag.style.setProperty("--mx", `${x}%`);
-      tag.style.setProperty("--my", `${y}%`);
-    });
-
-    tag.addEventListener("mouseleave", () => {
-      tag.style.setProperty("--mx", "50%");
-      tag.style.setProperty("--my", "50%");
-    });
-  });
+document.addEventListener("DOMContentLoaded", function () {
+    let params = new URLSearchParams(document.location.search);
+    let p = params.get("newsletter");
+    if (parseInt(p) == 1) {
+        const nl = document.querySelector(".newsletter");
+        const inf = document.querySelector(".info");
+        nl.classList.remove("d-none");
+        inf.classList.add("d-none");
+    }
 });
