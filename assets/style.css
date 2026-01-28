@@ -379,12 +379,16 @@ html, body {
   }
 
   .contact .wrapper {
-    height: 300px;
+    height: auto;
   }
 
   .contact .wrapper p {
     margin: 1rem 0;
     text-align: center;
+  }
+
+  .he-hours .hours-card {
+    height: auto;
   }
 }
 
